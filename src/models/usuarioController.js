@@ -16,6 +16,8 @@ email,
 senha: senhaCriptografada,
 cargo,
 redessociais,
+placacarro: null,
+modelocarro: null,
 });
 
 res.status(201).json({
@@ -27,6 +29,8 @@ telefone: usuario.telefone,
 email: usuario.email,
 cargo: usuario.cargo,
 redessociais: usuario.redessociais,
+placacarro: usuario.placacarro,
+modelocarro: usuario.modelocarro,
 });
 } catch (erro) {
 res.status(400).json({
