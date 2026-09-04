@@ -1,12 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Oficina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Oficina da Casa</h1>
+
+    <div class="bg-elements">
+        <div class="shape shape-star"></div>
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-pill"></div>
+        <div class="shape shape-square"></div>
+    </div>
+
+    <div class="card">
+        <h1 class="main-title">Oficina</h1>
+        
+        <form action="http://localhost:3000/usuarios" method="POST">
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Wilson Carlos" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Apenas números" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" placeholder="Ex: 23" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="wilson@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="******" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="Ex: 21953481125" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cargo">Cargo</label>
+                    <select id="cargo" name="cargo" required>
+                        <option value="mecanico">Mecânico</option>
+                        <option value="auxiliar">Auxiliar</option>
+                        <option value="atendente">Atendente</option>
+                        <option value="chefe">Chefe</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="redessociais">Redes Sociais (Opcional)</label>
+                    <input type="text" id="redessociais" name="redessociais" placeholder="@usuario ou link">
+                </div>
+                
+                <div class="form-group">
+                    <label for="placacarro">Placa do Carro (Opcional)</label>
+                    <input type="text" id="placacarro" name="placacarro" placeholder="ABC1D23">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modelocarro">Modelo do Carro (Opcional)</label>
+                    <input type="text" id="modelocarro" name="modelocarro" placeholder="Ex: Gol 1.6">
+                </div>
+                
+                <div class="form-group full-width">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="separator">JÁ POSSUI CONTA?</div>
+
+        <form action="http://localhost:3000/login" method="POST">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="wilson@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-senha">Senha</label>
+                    <input type="password" id="login-senha" name="senha" placeholder="******" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <button type="submit" class="btn-blue">Entrar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
